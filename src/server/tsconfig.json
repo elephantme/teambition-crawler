@@ -1,0 +1,21 @@
+{
+  "include": [
+    "../server/**/*"
+  ],
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "es5",
+      "es6",
+      "dom"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "rootDir": "../server",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "outDir": "../../build",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  }
+}
