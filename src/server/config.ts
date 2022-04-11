@@ -3,8 +3,8 @@ const config: any = {
     db: {
       host: 'localhost',
       port: '3306',
-      username: '',
-      password: '',
+      username: 'root',
+      password: 'hetao',
       database: 'dc_doc',
       charset: 'utf8mb4',
     },
@@ -15,6 +15,10 @@ const config: any = {
     host: 'http://localhost:3000',
   },
 };
+
+export const tbCookie = '';
+export const xAppId = '';
+export const xTenantId = '';
 
 export const env = process.env.NODE_ENV || 'dev';
 export default config[env];

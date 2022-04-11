@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { tbCookie } from './cookie.config';
+import { tbCookie, xAppId, xTenantId } from '../config';
 
 const fs = require('fs');
 const write = require('write');
@@ -7,8 +7,8 @@ const write = require('write');
 export const tbAxios = axios.create({
   headers: {
     // header中的查找下面这两个值
-    'x-app-id': '',
-    'x-tenant-id': '',
+    'x-app-id': xAppId,
+    'x-tenant-id': xTenantId,
     cookie: tbCookie,
   },
 });

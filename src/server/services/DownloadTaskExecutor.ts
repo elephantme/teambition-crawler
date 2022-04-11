@@ -129,9 +129,7 @@ export class DownloadTaskExecutor {
   async writeFile(resource, workspaceName, fileType, downloadType, stream) {
     const names = resource.parentNames.slice();
     names.push(`${resource.name}.${fileType}`);
-    const filePath = `钉钉文档_${downloadType}/${workspaceName}/${names.join(
-      '/',
-    )}`;
+    const filePath = `docs_${downloadType}/${workspaceName}/${names.join('/')}`;
     await writeFile(filePath, stream);
     return filePath;
   }
@@ -140,7 +138,7 @@ export class DownloadTaskExecutor {
     console.log(
       `filePath:${filePath}, fileName: ${fileName}, taskId:${taskId}`,
     );
-    const destPath = `钉钉文档_html/${workspaceName}/${[
+    const destPath = `docs_html/${workspaceName}/${[
       ...parentNames,
       fileName,
     ].join('/')}`;
